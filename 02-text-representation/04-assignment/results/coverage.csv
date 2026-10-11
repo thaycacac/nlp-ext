@@ -1,0 +1,4 @@
+source,vocab_words,found,unique_coverage_pct,token_coverage_train_pct,token_coverage_val_pct,token_coverage_test_pct,unk_val_pct,unk_test_pct,train_time_s
+word2vec,46319,46319,100.0,99.32,98.76,98.34,1.24,1.66,16.3
+glove,46319,39637,85.57,97.15,96.76,96.46,1.24,1.66,0.0
+fasttext,46319,46319,100.0,99.32,98.76,98.34,1.24,1.66,50.2

@@ -1,0 +1,6 @@
+.venv/
+cache/
+cache_quick/
+results_quick/
+results_run.log
+__pycache__/

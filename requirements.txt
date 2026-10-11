@@ -1,3 +1,7 @@
 gensim
 nltk
 certifi
+torch
+transformers
+scikit-learn
+matplotlib

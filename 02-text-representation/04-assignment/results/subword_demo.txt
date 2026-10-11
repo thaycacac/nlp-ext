@@ -1,0 +1,7 @@
+Từ lạ / sai chính tả: Word2Vec so với fastText
+
+- 'terrrible': word2vec có vector? False | fastText có từ tường minh? False | fastText tạo vector từ n-gram: ‖v‖=8.78 | gần nhất: ['terrible', 'horrible', 'horrendous', 'terribleness', 'unlawful']
+- 'amazinggg': word2vec có vector? False | fastText có từ tường minh? False | fastText tạo vector từ n-gram: ‖v‖=7.18 | gần nhất: ['amazing', 'excellent', 'incredible', "'excellent", 'excellency']
+- 'unwatchable': word2vec có vector? True | fastText có từ tường minh? True | fastText tạo vector từ n-gram: ‖v‖=9.36 | gần nhất: ['watchable', 'unmissable', 'unenjoyable', 'unreachable', 'unforgivable']
+- 'awsome': word2vec có vector? True | fastText có từ tường minh? True | fastText tạo vector từ n-gram: ‖v‖=8.36 | gần nhất: ['irksome', "'some", 'fulsome', 'loathsome', 'some']
+- 'movvie': word2vec có vector? False | fastText có từ tường minh? False | fastText tạo vector từ n-gram: ‖v‖=7.51 | gần nhất: ['moovie', 'movie', 'moviegoer', "movin'", 'roadmovie']
