@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# NLP data / models (large, re-downloadable)
+nltk_data/
+gensim-data/
+*.model
+*.bin
+*.vec
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Secrets
+.env
