@@ -1,6 +1,6 @@
 """Xuất REPORT.md (kèm bảng thí nghiệm và các biểu đồ) thành PDF bằng Chrome headless.
 
-    .venv/bin/python export_report_pdf.py            # -> report/REPORT.pdf
+    .venv/bin/python export_report_pdf.py            # -> report/technical_report.pdf
 """
 import re
 import subprocess
@@ -11,7 +11,7 @@ import markdown
 import make_report
 
 ROOT = Path(__file__).resolve().parent
-OUT = ROOT / "report" / "REPORT.pdf"
+OUT = ROOT / "report" / "technical_report.pdf"
 
 CSS = """
 @page { size: A4; margin: 16mm 15mm; }

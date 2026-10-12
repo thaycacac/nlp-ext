@@ -2,7 +2,7 @@
 
 Dùng:
     .venv/bin/python make_report.py --results results_quick --out report/report_quick.pdf   # tạm thời (quick)
-    .venv/bin/python make_report.py --results results       --out report/report.pdf         # kết quả thật
+    .venv/bin/python make_report.py --results results       --out report/required_experiments.pdf         # kết quả thật
 Cần Google Chrome (in HTML -> PDF bằng chế độ headless); không cần thêm thư viện Python.
 """
 import argparse
@@ -16,6 +16,8 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parent
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+
+TEAM = "hoa25ms13299, hiep25ms13293, long25ms13310, anh25ms13296"
 
 ROWS = [  # (run, điều kiện, layer, mục đích, [(nhãn, experiment, embedding, trainable)])
     ("E0", "Random 100-dimensional vectors", "Frozen or fixed control",
@@ -51,6 +53,7 @@ td.mid { text-align: center; }
 .sub > div { flex: 1; }
 b.n { font-weight: bold; }
 .notes { margin-top: 12px; font-size: 12px; line-height: 1.5; }
+.team { margin: 0 0 8px; font-size: 12.5px; }
 .warn { margin-top: 8px; padding: 6px 9px; border: 1px solid #d9a441; background: #fdf4e0;
         font-size: 12px; }
 """
@@ -153,6 +156,7 @@ def build(results_dir: Path, provisional: bool):
             "full-run results (25,000 test reviews).</div>") if provisional else ""
     return (f"<!doctype html><html><head><meta charset='utf-8'><title>Required experiments</title>"
             f"<style>{CSS}</style></head><body><h1>8 Required experiments</h1>"
+            f"<p class='team'><b>Team members (student IDs):</b> {TEAM}</p>"
             "<table><colgroup><col style='width:4%'><col style='width:12%'><col style='width:8%'>"
             "<col style='width:15%'><col style='width:19%'><col style='width:42%'></colgroup>"
             "<tr><th>Run</th><th>Embedding condition</th><th>Embedding layer</th><th>Purpose</th>"
@@ -162,7 +166,7 @@ def build(results_dir: Path, provisional: bool):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--results", default="results")
-    ap.add_argument("--out", default="report/report.pdf")
+    ap.add_argument("--out", default="report/required_experiments.pdf")
     ap.add_argument("--provisional", action="store_true",
                     help="gắn nhãn tạm thời (tự bật nếu tên thư mục chứa 'quick')")
     a = ap.parse_args()

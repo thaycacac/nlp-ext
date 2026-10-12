@@ -1,5 +1,7 @@
 # Word Embeddings for Sentiment Classification: Word2Vec CBOW vs GloVe vs fastText CBOW with an LSTM
 
+**Team members (student IDs):** hoa25ms13299, hiep25ms13293, long25ms13310, anh25ms13296
+
 ## 1. Setup
 
 **Task and data.** Binary sentiment classification on IMDB (25,000 train / 25,000 test reviews). The official train split was divided 80/20 into 20,000 training and 5,000 validation reviews (permutation seed 42); the official test split was used only for the final evaluation.

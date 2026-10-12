@@ -2,10 +2,12 @@
 
 So sánh **Word2Vec CBOW**, **GloVe** và **fastText CBOW** (cùng một LSTM một chiều, một tầng) trên
 bài toán phân loại cảm xúc review phim IMDB, kèm một điều kiện đối chứng embedding ngẫu nhiên.
+**Nhóm thực hiện (mã sinh viên):** hoa25ms13299, hiep25ms13293, long25ms13310, anh25ms13296.
+
 Đây là project **độc lập** (có `requirements.txt` và `.venv` riêng, không dùng chung với repo gốc).
 
-Báo cáo kỹ thuật (trả lời 6 câu hỏi của đề): [REPORT.md](REPORT.md) ·
-Bảng "Required experiments" dạng PDF: [report/report.pdf](report/report.pdf)
+Báo cáo kỹ thuật (trả lời 6 câu hỏi của đề): [REPORT.md](REPORT.md) ([PDF](report/technical_report.pdf)) ·
+Bảng "Required experiments" dạng PDF: [report/required_experiments.pdf](report/required_experiments.pdf)
 
 ## Cài đặt (môi trường sạch)
 
@@ -23,7 +25,7 @@ python3 -m venv .venv
 .venv/bin/python run_experiments.py            # đầy đủ: 7 điều kiện x 3 seed (~50 phút trên M1 Max/MPS)
 .venv/bin/python run_experiments.py --seeds 0  # pilot 1 seed
 .venv/bin/python run_experiments.py --quick    # smoke test vài phút (dữ liệu nhỏ, ghi ra results_quick/)
-.venv/bin/python make_report.py --results results --out report/report.pdf   # bảng PDF (cần Google Chrome)
+.venv/bin/python make_report.py --results results --out report/required_experiments.pdf   # bảng PDF (cần Google Chrome)
 ```
 
 Chương trình chạy lại được: run nào đã có trong `results/runs/` sẽ được bỏ qua. Lần đầu sẽ tải IMDB
